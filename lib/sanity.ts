@@ -10,13 +10,7 @@ export const apiVersion = '2024-01-01'
 const isSanityConfigured = /^[a-z0-9-]+$/.test(projectId)
 
 export const sanityClient = isSanityConfigured
-  ? createClient({
-      projectId,
-      dataset,
-      apiVersion,
-      useCdn: false,
-      fetch: { cache: 'no-store' },
-    })
+  ? createClient({ projectId, dataset, apiVersion, useCdn: false })
   : null
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
