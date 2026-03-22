@@ -1,21 +1,67 @@
 'use client'
 
+import { useState } from 'react'
+
+type State = 'idle' | 'loading' | 'success' | 'error'
+
 export default function NewsletterForm() {
+  const [email, setEmail] = useState('')
+  const [state, setState] = useState<State>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setState('loading')
+    setErrorMsg('')
+
+    try {
+      const res = await fetch('/api/newsletter', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setErrorMsg(data.error ?? 'Something went wrong.')
+        setState('error')
+      } else {
+        setState('success')
+        setEmail('')
+      }
+    } catch {
+      setErrorMsg('Network error. Please try again.')
+      setState('error')
+    }
+  }
+
+  if (state === 'success') {
+    return (
+      <p className="font-mono text-xs text-teal tracking-wide">
+        Subscribed. You'll hear from me when something worth reading is out.
+      </p>
+    )
+  }
+
   return (
-    <form
-      onSubmit={(e) => e.preventDefault()}
-      className="flex flex-col gap-3"
-      aria-label="Newsletter signup"
-    >
+    <form onSubmit={handleSubmit} className="flex flex-col gap-3" aria-label="Newsletter signup">
       <input
         type="email"
         placeholder="your@email.com"
         required
-        className="bg-ink border border-ink-light text-text-primary placeholder-text-muted text-sm px-4 py-2.5 rounded-sm focus:outline-none focus:border-gold-DEFAULT transition-colors duration-200"
-        style={{ background: 'var(--ink)', borderColor: 'rgba(28,39,64,1)', color: 'var(--text-primary)' }}
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        disabled={state === 'loading'}
+        className="bg-ink border border-ink-light text-text-primary placeholder-text-muted text-sm px-4 py-2.5 rounded-sm focus:outline-none focus:border-gold-DEFAULT transition-colors duration-200 disabled:opacity-50"
       />
-      <button type="submit" className="btn-primary justify-center text-xs py-2.5">
-        Subscribe
+      {errorMsg && (
+        <p className="font-mono text-xs text-red-400">{errorMsg}</p>
+      )}
+      <button
+        type="submit"
+        disabled={state === 'loading'}
+        className="btn-primary justify-center text-xs py-2.5 disabled:opacity-50"
+      >
+        {state === 'loading' ? 'Subscribing…' : 'Subscribe'}
       </button>
     </form>
   )
