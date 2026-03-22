@@ -72,11 +72,11 @@ export default async function ArticlePage({ params }: Props) {
   if (!sanityPost && !staticArticle) notFound()
 
   // Unified view model
-  const title = sanityPost?.title ?? staticArticle!.title
-  const excerpt = sanityPost?.excerpt ?? staticArticle!.excerpt
-  const category = sanityPost?.category?.title ?? staticArticle!.category
-  const publishedAt = sanityPost?.publishedAt ?? staticArticle!.date
-  const readTime = sanityPost?.estimatedReadingTime ?? staticArticle!.readTime
+  const title = sanityPost?.title ?? staticArticle?.title ?? ''
+  const excerpt = sanityPost?.excerpt ?? staticArticle?.excerpt ?? ''
+  const category = sanityPost?.category?.title ?? staticArticle?.category ?? ''
+  const publishedAt = sanityPost?.publishedAt ?? staticArticle?.date ?? ''
+  const readTime = sanityPost?.estimatedReadingTime ?? staticArticle?.readTime ?? null
   const tags: string[] = sanityPost?.tags?.map((t: any) => t.title) ?? []
   const coverUrl = sanityPost?.coverImage?.asset?.url ?? null
   const coverAlt = sanityPost?.coverImage?.alt ?? title
