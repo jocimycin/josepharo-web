@@ -37,7 +37,7 @@ export default function NewsletterForm() {
   if (state === 'success') {
     return (
       <p className="font-mono text-xs text-teal tracking-wide">
-        Subscribed. You'll hear from me when something worth reading is out.
+        You're in. I'll only write when I have something genuinely worth sending.
       </p>
     )
   }
