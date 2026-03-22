@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight, ArrowUpRight } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
@@ -115,7 +116,7 @@ export default function HomePage() {
             <div>
               <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-3">Selected Work</p>
               <h2 id="work-heading" className="font-display font-light text-h2 text-text-primary">
-                Projects across domains.
+                Selected systems and strategic engagements.
               </h2>
             </div>
             <Link
@@ -135,8 +136,11 @@ export default function HomePage() {
               <Link href={`/work/${mainProject.slug}`} className="group block h-full">
                 <div className="bg-ink-mid border border-ink-light rounded-sm overflow-hidden h-full min-h-[320px] card-interactive relative">
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-ink/20 to-ink/80 z-10" />
-                  {/* Cover image placeholder */}
+                  {/* Cover image */}
                   <div className="absolute inset-0 bg-gradient-to-br from-ink-light to-ink" />
+                  {mainProject.coverImage && (
+                    <Image src={mainProject.coverImage} alt={mainProject.title} fill className="object-cover opacity-60" />
+                  )}
                   <div className="absolute inset-0 z-20 flex flex-col justify-end p-7">
                     <span className="badge badge-teal mb-3 w-fit">{mainProject.domain}</span>
                     <h3 className="font-display font-light text-text-primary text-xl md:text-2xl mb-2 leading-tight group-hover:text-gold-DEFAULT transition-colors duration-200">
@@ -217,13 +221,13 @@ export default function HomePage() {
             <RevealSection>
               <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-3">Field Notes & Intelligence</p>
               <h2 className="font-display font-light text-h2 text-text-primary mb-6">
-                Ideas worth reading.
+                Field Notes and Intelligence.
               </h2>
               <p className="text-text-secondary text-base leading-relaxed mb-8 max-w-md">
-                Essays, insights, and observations on geospatial technology, earth observation, data systems, and the work of translating complex spatial data into real-world decisions.
+                Thoughts, methods, and observations from the intersection of geospatial intelligence, hydrography, earth observation, data systems, and strategic execution.
               </p>
               <Link href="/writing" className="btn-primary inline-flex">
-                Explore All Writing <ArrowRight size={16} />
+                Read Field Notes <ArrowRight size={16} />
               </Link>
             </RevealSection>
 

@@ -12,12 +12,12 @@ export const metadata: Metadata = {
 }
 
 const topics = [
-  { title: 'Geospatial Intelligence & Strategy', desc: 'From data acquisition to executive decision support — building spatial intelligence systems that actually get used.' },
-  { title: 'Earth Observation & Remote Sensing', desc: 'How satellite-derived and UAV-acquired data is changing what we know about our environment and infrastructure.' },
-  { title: 'UAV Operations & Drone Mapping', desc: 'The state of drone-enabled data collection — from regulatory landscape to operational field practice.' },
-  { title: 'Hydrography & Waterways Intelligence', desc: 'Mapping water: bathymetric surveys, hydrodynamic modelling, and geospatial intelligence for waterway systems.' },
-  { title: 'Data Strategy & Geospatial Transformation', desc: 'Why most organisations have spatial data and no spatial intelligence — and how to close that gap.' },
-  { title: 'Climate & Environmental GIS', desc: 'Applying geospatial methods to environmental change, permafrost dynamics, land cover shifts, and climate risk.' },
+  { title: 'Geospatial Intelligence for Decision-Makers', desc: 'From data acquisition to executive decision support — building spatial intelligence systems that leadership teams can actually use.' },
+  { title: 'Hydrography, Waterways & Spatial Planning', desc: 'Mapping water: bathymetric surveys, hydrodynamic modelling, and geospatial intelligence for complex waterway and coastal environments.' },
+  { title: 'Remote Sensing in Applied Exploration & Environmental Contexts', desc: 'How multispectral, hyperspectral, and LiDAR data drives exploration intelligence, change detection, and environmental monitoring.' },
+  { title: 'Building Decision-Ready Geospatial Systems', desc: 'Why most organisations have spatial data and no spatial intelligence — and what it takes to design systems that close that gap.' },
+  { title: 'Translating Technical Work for Executive & Stakeholder Audiences', desc: 'The communication layer of geospatial work: how to frame complex spatial intelligence so decision-makers can act on it.' },
+  { title: 'Climate & Environmental Geospatial Intelligence', desc: 'Applying earth observation and spatial methods to permafrost dynamics, land cover shifts, erosion risk, and climate-linked operational planning.' },
 ]
 
 export default function SpeakingPage() {
@@ -32,7 +32,7 @@ export default function SpeakingPage() {
               Turning spatial science into ideas worth hearing.
             </h1>
             <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-xl mb-8">
-              Joseph speaks on geospatial intelligence, earth observation, UAV operations, environmental data systems, and the strategic use of spatial data — for conferences, institutions, organisations, and leadership forums.
+              I speak on geospatial intelligence, remote sensing, hydrography, data strategy, field systems, and the operational realities of turning complex spatial data into decisions — for conferences, institutions, panels, workshops, and internal team sessions.
             </p>
             <Link href="/contact" className="btn-primary inline-flex">
               Invite Joseph to Speak <ArrowRight size={16} />

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { ArrowLeft, ArrowRight } from 'lucide-react'
@@ -78,13 +79,20 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Cover image area */}
+      {/* Cover image */}
       <div className="bg-ink-mid border-y border-ink-light">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-10 py-0">
-          <div className="relative aspect-video md:aspect-[21/7] bg-gradient-to-br from-ink-light to-ink flex items-center justify-center">
-            <p className="font-mono text-xs text-text-muted tracking-widest uppercase opacity-50">
-              [IMAGE PLACEHOLDER — Project cover image]
-            </p>
+        <div className="max-w-[1280px] mx-auto px-6 md:px-10">
+          <div className="relative aspect-video md:aspect-[21/7] overflow-hidden bg-gradient-to-br from-ink-light to-ink">
+            {project.coverImage && (
+              <Image
+                src={project.coverImage}
+                alt={project.title}
+                fill
+                className="object-cover opacity-80"
+                priority
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
           </div>
         </div>
       </div>

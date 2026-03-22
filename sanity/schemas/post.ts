@@ -112,6 +112,32 @@ export const post = defineType({
       ],
     }),
     defineField({
+      name: 'crossPostLinks',
+      title: 'Cross-Post Links',
+      type: 'object',
+      description: 'If you publish this article on other platforms, add the links here so readers can find and engage on their preferred network.',
+      fields: [
+        defineField({
+          name: 'linkedin',
+          title: 'LinkedIn Article URL',
+          type: 'url',
+          description: 'URL of the LinkedIn article / newsletter post',
+        }),
+        defineField({
+          name: 'twitter',
+          title: 'Twitter / X Thread URL',
+          type: 'url',
+          description: 'URL of the Twitter/X thread or post',
+        }),
+        defineField({
+          name: 'medium',
+          title: 'Medium Article URL',
+          type: 'url',
+          description: 'URL of the Medium article',
+        }),
+      ],
+    }),
+    defineField({
       name: 'seo',
       title: 'SEO',
       type: 'object',

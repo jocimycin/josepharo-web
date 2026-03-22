@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Research / article source materials — too large for git
+_articling/
+_articling.zip
+joseph_aro_website_build_pack.md
+lib/joseph_aro_website_build_pack.md
+.vscode/

@@ -2,7 +2,10 @@ import { defineConfig } from 'sanity'
 import { structureTool } from 'sanity/structure'
 import { visionTool } from '@sanity/vision'
 import { schemaTypes } from './sanity/schemas'
-import { projectId, dataset, apiVersion } from './lib/sanity'
+// Trim any accidental whitespace from env var (e.g. trailing newline from CLI piping)
+const projectId = (process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ?? '').trim()
+const dataset = (process.env.NEXT_PUBLIC_SANITY_DATASET || 'production').trim()
+const apiVersion = '2024-01-01'
 
 export default defineConfig({
   name: 'josepharo-web',

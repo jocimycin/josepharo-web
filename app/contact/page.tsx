@@ -104,7 +104,7 @@ export default function ContactPage() {
               <div className="bg-ink-mid border border-ink-light rounded-sm p-6">
                 <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-5">Open to</p>
                 <ul className="space-y-2">
-                  {['Consulting & Advisory', 'Research Collaboration', 'Speaking Engagements', 'Strategic Partnerships', 'Media & Press'].map((type) => (
+                  {contactConfig.inquiryTypes.map((type) => (
                     <li key={type} className="flex items-center gap-2">
                       <span className="w-1 h-1 rounded-full bg-gold-DEFAULT flex-shrink-0" />
                       <span className="text-text-secondary text-sm">{type}</span>
@@ -112,6 +112,15 @@ export default function ContactPage() {
                   ))}
                 </ul>
               </div>
+
+              {/* Closing note */}
+              {contactConfig.closingLine && (
+                <div className="border border-gold-subtle rounded-sm p-5">
+                  <p className="font-display font-light text-text-primary text-sm leading-relaxed italic">
+                    &ldquo;{contactConfig.closingLine}&rdquo;
+                  </p>
+                </div>
+              )}
             </RevealSection>
           </div>
         </div>

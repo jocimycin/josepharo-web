@@ -23,27 +23,28 @@ export const hero = {
   headline: 'From field data\nto executive insight —',
   subheadline: 'geospatial intelligence\nfor complex environments.',
   supporting:
-    'I work across geospatial intelligence, remote sensing, hydrography, UAV mapping, and data strategy — solving complex environmental, infrastructure, and operational problems.',
+    'I build applied geospatial systems that turn earth observation, hydrography, UAV field data, and spatial analytics into decisions that matter.',
   ctaPrimary: { label: 'Explore My Work', href: '/work' },
-  ctaSecondary: { label: 'Read My Writing', href: '/writing' },
+  ctaSecondary: { label: 'Read Field Notes', href: '/writing' },
 }
 
 export const credibilityStrip = [
-  '10+ Years Experience',
+  '10+ Years Applied Geospatial Practice',
   'Teck Resources',
-  'Lagos Waterways Authority',
+  'Lagos State Waterways Authority',
   'Adam Smith International',
   '300+ Professionals Trained',
   'Transport Canada Licensed Pilot',
-  'BC, Canada & Lagos, Nigeria',
+  'BC, Canada · Lagos, Nigeria',
   'Mining · Waterways · Infrastructure · Environment',
+  'Remote Sensing · Hydrography · Data Strategy',
 ]
 
 export const positioningSection = {
   headline: 'Geospatial expertise at the scale of complex problems.',
   body: [
-    'Joseph Aro is a senior geospatial and data professional with over a decade of experience spanning GIS, remote sensing, UAV-enabled surveying, hydrography, environmental intelligence, and strategic project delivery. His work covers the full value chain — from field acquisition and technical operations to enterprise data architecture, spatial analytics, and executive decision support.',
-    'Working across mining, waterways, infrastructure, urban development, and environmental systems in Canada and Nigeria, Joseph brings rare cross-disciplinary range: technically deep enough to run complex remote sensing workflows, commercially astute enough to frame intelligence for leadership audiences.',
+    'I work across the full value chain of geospatial intelligence — data acquisition, earth observation, hydrography, systems design, analytics, and strategic delivery. The goal is not only to generate maps or models, but to produce intelligence that leaders can act on.',
+    'From field operations to executive insight, I work across mining, waterways, infrastructure, and environmental systems in Canada and Nigeria — technically deep enough to run complex remote sensing workflows, strategically aware enough to frame intelligence for leadership audiences.',
   ],
   cta: { label: 'About Joseph', href: '/about' },
 }
@@ -91,16 +92,16 @@ export const projects = [
     period: '2024–Present',
     role: 'Lead, Data and Information',
     summary:
-      'Established a geospatial centre of excellence, defining standards and best practices for GIS data governance and remote sensing workflows — driving an enterprise shift from siloed architectures to interconnected spatial intelligence systems.',
+      'Built and supported a geospatial transformation direction that strengthened standards, governance, and the strategic use of spatial intelligence within an enterprise mining context — driving the shift from siloed data practices toward connected spatial intelligence.',
     challenge:
-      'A large international mining operation with fragmented geospatial data across multiple systems, inconsistent standards, and no unified governance framework for spatial assets.',
+      'Geospatial capability was fragmented across teams, tools, and workflows. The challenge was to create a more connected operating model where data, standards, and analysis could scale more effectively across a large international operation.',
     approach:
       'Audited existing data architecture, defined governance standards and metadata conventions, deployed advanced aerial mapping workflows using UAV platforms with LiDAR, optical, and magnetic sensors, and led the architectural transformation toward interconnected geospatial data structures.',
     methods: ['ArcGIS Enterprise', 'QGIS', 'LiDAR', 'UAV Operations', 'FME', 'Data Governance', 'Remote Sensing'],
     outcomes:
-      'Established a functioning geospatial centre of excellence with documented standards adopted across the organisation. Advanced aerial mapping capabilities deployed. Fragmented spatial systems consolidated into structured, interconnected intelligence infrastructure.',
+      'A stronger foundation for connected geospatial intelligence and more coherent enterprise practice. Documented standards adopted across the organisation. Advanced aerial mapping capabilities deployed and fragmented spatial systems consolidated.',
     reflection:
-      'Transforming data architecture in large organisations requires equal parts technical rigour and stakeholder alignment. The governance framework was as important as the technology choices.',
+      'The true value of geospatial capability appears when it shifts from isolated technical production to integrated decision infrastructure. The governance framework was as important as the technology choices.',
     featured: true,
     coverImage: '/images/project-teck-coe.jpg', // Terrain Modelling
     slug: 'geospatial-centre-of-excellence',
@@ -114,18 +115,18 @@ export const projects = [
     period: '2024–Present',
     role: 'Lead, Data and Information',
     summary:
-      'Pioneered advanced mineral exploration mapping using multispectral and hyperspectral remote sensing workflows, supporting exploration intelligence and operational efficiency.',
+      'Applied earth observation workflows to support mineral exploration understanding through spectral interpretation, alteration mapping, and geospatial analysis — enabling improved exploration targeting and spatial intelligence.',
     challenge:
-      'Mineral exploration teams relied on conventional survey methods without leveraging the spectral data available from modern remote sensing platforms.',
+      'Exploration contexts require the ability to extract actionable signals from large, multi-source datasets while retaining geological credibility. Teams relied on conventional survey methods without leveraging spectral data from modern remote sensing platforms.',
     approach:
-      'Designed and implemented workflows for processing multispectral and hyperspectral imagery, integrating spectral analysis into the exploration intelligence pipeline.',
-    methods: ['Hyperspectral Analysis', 'Multispectral Remote Sensing', 'Google Earth Engine', 'Python', 'ArcGIS'],
+      'Designed and implemented workflows for processing multispectral and hyperspectral imagery, integrating spectral analysis and alteration mapping into the exploration intelligence pipeline.',
+    methods: ['Hyperspectral Analysis', 'Multispectral Remote Sensing', 'Alteration Mapping', 'Google Earth Engine', 'Python', 'ArcGIS'],
     outcomes:
-      'Established a repeatable spectral analysis workflow for mineral occurrence analysis, advancing exploration intelligence capabilities.',
+      'Improved interpretation pathways for exploration targeting and spatial understanding. Established a repeatable spectral analysis workflow for mineral occurrence analysis, advancing long-term exploration intelligence capabilities.',
     reflection:
-      'The intersection of spectral data science and operational mining intelligence is a rapidly maturing space — building the internal capability to exploit it is a long-term competitive advantage.',
+      'Remote sensing delivers the most value when spectral workflows are tightly tied to exploration questions, not treated as isolated image exercises. The intersection of spectral data science and operational mining intelligence is a long-term competitive advantage.',
     featured: true,
-    coverImage: '/images/project-mineral.jpg',
+    coverImage: '/images/project-lidar-bridge.png',
     slug: 'mineral-exploration-mapping',
   },
   {
@@ -148,7 +149,7 @@ export const projects = [
     reflection:
       'Climate-aware geospatial intelligence is no longer a research niche — it is operational necessity for any resource organisation working in northern or high-altitude environments.',
     featured: false,
-    coverImage: '/images/project-permafrost.jpg',
+    coverImage: '/images/project-erosion.jpg',
     slug: 'permafrost-change-detection',
   },
   {
@@ -160,18 +161,18 @@ export const projects = [
     period: '2018–2022',
     role: 'Project Manager / GIS Specialist',
     summary:
-      'Led bathymetric surveys, hydrodynamic assessments, jetty viability studies, and the design of a geospatial information portal for Lagos waterways intelligence — one of West Africa\'s most complex urban waterway systems.',
+      'Supported the development of hydrographic and geospatial intelligence for Lagos waterways through survey integration, spatial analysis, and portal-oriented thinking — building a clearer spatial foundation for planning and operational decision-making across West Africa\'s most complex urban waterway system.',
     challenge:
-      'Lagos Lagoon lacked current, authoritative bathymetric data and an integrated spatial intelligence system, limiting waterways planning, safety, and investment decisions.',
+      'Waterways decisions depend on fragmented physical, operational, and navigational information. Lagos Lagoon lacked current, authoritative bathymetric data and an integrated spatial intelligence system, limiting planning, safety, and investment decisions.',
     approach:
-      'Conducted multi-season bathymetric surveys of the Lagos Lagoon system, performed hydrodynamic analysis of tidal and current patterns, delivered jetty viability assessments, and led the design of a geospatial information portal consolidating waterways data.',
-    methods: ['Bathymetric Survey', 'Hydrodynamic Modelling', 'ArcGIS', 'QGIS', 'GIS Portal Development', 'System Dynamics'],
+      'Conducted multi-season bathymetric surveys of the Lagos Lagoon system, performed hydrodynamic analysis of tidal and current patterns, delivered jetty viability assessments, and led the design of a geospatial information portal consolidating waterways data for operational use.',
+    methods: ['Bathymetric Survey', 'Hydrodynamic Modelling', 'Waterway Route Intelligence', 'GIS Portal Development', 'ArcGIS', 'QGIS', 'System Dynamics'],
     outcomes:
-      'Delivered authoritative bathymetric datasets, hydrodynamic models, and jetty viability reports used in waterways planning. Designed a geospatial information portal for LASWA operational intelligence.',
+      'A stronger geospatial basis for understanding channel conditions, routes, planning contexts, and spatial decision needs. Delivered authoritative bathymetric datasets, hydrodynamic models, and jetty viability reports. Geospatial information portal designed for LASWA operational intelligence.',
     reflection:
-      'Urban waterway systems are among the most complex geospatial environments to work in — they are simultaneously infrastructure corridors, ecological systems, and commercial networks.',
+      'Hydrographic work becomes more valuable when it is integrated into a broader intelligence layer rather than treated as a standalone survey product. Urban waterway systems are simultaneously infrastructure corridors, ecological systems, and commercial networks.',
     featured: true,
-    coverImage: '/images/project-lagos-lagoon.jpg',
+    coverImage: '/images/field-waterways-team.jpg',
     slug: 'lagos-lagoon-hydrographic-intelligence',
   },
   {
@@ -194,7 +195,7 @@ export const projects = [
     reflection:
       'Waterways investment requires bridging technical hydrographic science with commercial viability assessment — the intelligence must be actionable for decision-makers, not just technically complete.',
     featured: false,
-    coverImage: '/images/project-wide-lag.jpg',
+    coverImage: '/images/field-on-water.jpg',
     slug: 'wide-lag-waterways-investment',
   },
   {
@@ -217,7 +218,7 @@ export const projects = [
     reflection:
       'Drone mapping at scale is an operational discipline as much as a technical one — logistics, airspace coordination, and workflow design determine whether the data actually reaches the decision-maker.',
     featured: false,
-    coverImage: '/images/project-drone-mapping.jpg',
+    coverImage: '/images/field-drone.jpg',
     slug: 'enterprise-drone-mapping',
   },
   {
@@ -333,9 +334,9 @@ export const skills = {
 }
 
 export const stats = [
-  { value: '10+', label: 'Years of Experience' },
+  { value: '10+', label: 'Years Applied Geospatial Practice' },
   { value: '300+', label: 'Professionals Trained' },
-  { value: '8', label: 'Major Project Domains' },
+  { value: '5', label: 'Core Practice Domains' },
   { value: '2', label: 'Countries of Operation' },
 ]
 
@@ -379,52 +380,58 @@ export const blogCategories = [
   'Field Notes',
 ]
 
-// PLACEHOLDER articles — replace with real posts
+// Articles — publish via Sanity Studio at /studio once connected.
+// These are launch-ready titles; body content to be authored by Joseph Aro.
 export const articles = [
   {
-    id: 'placeholder-1',
-    title: 'PLACEHOLDER — First article title required from Joseph',
+    id: 'article-1',
+    title: 'Why Most Geospatial Dashboards Fail Decision-Makers',
     slug: 'first-article',
     category: 'Geospatial Intelligence',
-    excerpt: 'PLACEHOLDER — Article excerpt required.',
+    excerpt:
+      'Most geospatial dashboards are built for analysts, not for the people who need to act on the data. The gap between technical output and decision-ready intelligence is where most projects break down — and it is a design problem, not a data problem.',
     date: '2026-03-01',
     readTime: 6,
     featured: true,
-    coverImage: '/images/blog-placeholder-1.jpg', // LiDAR aerial image
+    coverImage: '/images/blog-placeholder-1.jpg',
     body: '',
   },
   {
-    id: 'placeholder-2',
-    title: 'PLACEHOLDER — Second article title required from Joseph',
+    id: 'article-2',
+    title: 'Building Hydrographic Intelligence from Fragmented Datasets',
     slug: 'second-article',
     category: 'Hydrography & Waterways',
-    excerpt: 'PLACEHOLDER — Article excerpt required.',
+    excerpt:
+      'Waterway systems are some of the hardest environments to model spatially. Surveys are seasonal, datasets are incomplete, and the physical environment changes faster than most collection cycles. Here is how to build intelligence that holds up anyway.',
     date: '2026-02-15',
     readTime: 5,
     featured: false,
-    coverImage: '/images/blog-placeholder-2.jpg',
+    coverImage: '/images/blog-placeholder-1.jpg',
     body: '',
   },
   {
-    id: 'placeholder-3',
-    title: 'PLACEHOLDER — Third article title required from Joseph',
+    id: 'article-3',
+    title: 'From Field Acquisition to Executive Insight: Designing the Full Geospatial Chain',
     slug: 'third-article',
     category: 'Data Strategy',
-    excerpt: 'PLACEHOLDER — Article excerpt required.',
+    excerpt:
+      'The field-to-dashboard pipeline is where most geospatial projects break. Data gets collected, processed, and handed off — then sits in a system no one uses. Designing the full chain from acquisition to decision requires a fundamentally different approach.',
     date: '2026-02-01',
     readTime: 7,
     featured: false,
-    coverImage: '/images/blog-placeholder-3.jpg',
+    coverImage: '/images/blog-placeholder-1.jpg',
     body: '',
   },
 ]
 
 export const contactConfig = {
-  headline: "Let's Work Together",
+  headline: 'Working on Something Complex?',
   intro:
-    "For consulting, research collaboration, advisory, speaking, or strategic inquiries — get in touch directly.",
+    'For consulting, research collaboration, speaking, or strategic advisory on geospatial systems, remote sensing, hydrography, or spatial decision support — get in touch.',
+  closingLine:
+    'If the challenge is complex, spatial, and decision-critical, that is usually where I do my best work.',
   email: 'bidex99@gmail.com',
   phone: '', // PLACEHOLDER — confirm preferred public number or set to empty
   responseTime: 'I typically respond within 48 hours.',
-  inquiryTypes: ['Consulting', 'Advisory', 'Research Collaboration', 'Speaking', 'Other'],
+  inquiryTypes: ['Consulting & Technical Advisory', 'Research & Academic Collaboration', 'Speaking & Workshops', 'Geospatial Systems Design', 'Remote Sensing & Hydrographic Projects'],
 }
