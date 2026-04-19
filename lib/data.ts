@@ -412,14 +412,14 @@ export const articles = [
   {
     id: 'article-3',
     title: 'From Field Acquisition to Executive Insight: Designing the Full Geospatial Chain',
-    slug: 'third-article',
+    slug: 'field-acquisition-to-executive-insight-geospatial-chain',
     category: 'Data Strategy',
     excerpt:
-      'The field-to-dashboard pipeline is where most geospatial projects break. Data gets collected, processed, and handed off — then sits in a system no one uses. Designing the full chain from acquisition to decision requires a fundamentally different approach.',
-    date: '2026-02-01',
-    readTime: 7,
+      'The geospatial chain is technically mature at acquisition and analysis. It breaks at communication. Here is how to complete it — all the way to executive decision.',
+    date: '2026-04-18',
+    readTime: 12,
     featured: false,
-    coverImage: '/images/blog-placeholder-1.jpg',
+    coverImage: '/images/articles/field-acquisition-cover.jpg',
     body: '',
   },
 ]
