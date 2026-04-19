@@ -154,7 +154,7 @@ function ArticleCard({ post, delay = 0 }: { post: Post; delay?: number }) {
 
           {/* Content */}
           <div className="p-6 flex flex-col flex-1">
-            <div className="flex items-center gap-2.5 mb-4">
+            <div className="flex items-center gap-2.5 mb-3">
               {post.date && (
                 <span className="font-mono text-[0.65rem] text-text-muted flex items-center gap-1">
                   <Calendar size={9} />
@@ -172,17 +172,17 @@ function ArticleCard({ post, delay = 0 }: { post: Post; delay?: number }) {
               )}
             </div>
 
-            <h2 className="font-display font-light text-text-primary text-[1.1rem] leading-[1.35] mb-3 group-hover:text-gold-DEFAULT transition-colors duration-200 flex-1">
+            <h2 className="font-display font-light text-text-primary text-[1.15rem] leading-[1.3] mb-2.5 group-hover:text-gold-DEFAULT transition-colors duration-200">
               {post.title}
             </h2>
 
             {post.excerpt && (
-              <p className="text-text-muted text-[0.85rem] leading-relaxed line-clamp-2 mb-5">
+              <p className="text-text-muted text-[0.83rem] leading-relaxed line-clamp-2 mb-4">
                 {post.excerpt}
               </p>
             )}
 
-            <div className="flex items-center gap-1.5 text-text-muted text-[0.75rem] font-medium group-hover:text-gold-DEFAULT transition-colors duration-200 mt-auto">
+            <div className="flex items-center gap-1.5 text-text-muted text-[0.75rem] font-medium group-hover:text-gold-DEFAULT transition-colors duration-200 mt-auto pt-2">
               {post.hasBody ? (
                 <>Read <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" /></>
               ) : (

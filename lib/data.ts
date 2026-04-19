@@ -420,7 +420,7 @@ export const articles = [
     readTime: 12,
     featured: false,
     coverImage: '/images/articles/field-acquisition-cover.jpg',
-    body: '',
+    body: 'published',
   },
 ]
 

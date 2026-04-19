@@ -5,6 +5,9 @@ import { ArrowLeft, ArrowRight, Clock, Calendar } from 'lucide-react'
 import NewsletterForm from '@/components/NewsletterForm'
 import ShareButtons from '@/components/ShareButtons'
 import GeospatialDashboardDemo from '@/components/articles/GeospatialDashboardDemo'
+import FunctionalDashboardExample from '@/components/articles/FunctionalDashboardExample'
+import ConversionFunnelChart from '@/components/articles/ConversionFunnelChart'
+import GeospatialChainDiagram from '@/components/articles/GeospatialChainDiagram'
 import { siteConfig } from '@/lib/data'
 
 const SLUG = 'field-acquisition-to-executive-insight-geospatial-chain'
@@ -13,12 +16,12 @@ const articleUrl = `${siteConfig.url}/writing/${SLUG}`
 export const metadata: Metadata = {
   title: 'From Field Acquisition to Executive Insight: Designing the Full Geospatial Chain | Joseph Aro',
   description:
-    'The geospatial chain breaks at communication. A practitioner guide to designing dashboards that drive decisions — from question-first field design to executive briefing protocol.',
+    'The geospatial chain breaks at communication. A practitioner guide to designing dashboards that drive decisions, from question-first field design to executive briefing protocol.',
   openGraph: {
     type: 'article',
     title: 'From Field Acquisition to Executive Insight: Designing the Full Geospatial Chain',
     description:
-      'The geospatial chain is technically mature at acquisition and analysis. It breaks at communication. Here is how to complete it — all the way to executive decision.',
+      'The geospatial chain is technically mature at acquisition and analysis. It breaks at communication. Here is how to complete it, all the way to executive decision.',
     url: articleUrl,
     authors: ['Joseph Aro'],
     publishedTime: '2026-04-18',
@@ -83,7 +86,7 @@ export default function FieldAcquisitionArticle() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
           </div>
 
-          {/* Headline overlay — desktop */}
+          {/* Headline overlay, desktop */}
           <div className="absolute bottom-0 left-0 right-0 max-w-[1280px] mx-auto px-6 md:px-10 pb-12 hidden md:block">
             <div className="flex flex-wrap items-center gap-4 mb-5">
               <span className="badge badge-teal">Data Strategy</span>
@@ -144,7 +147,7 @@ export default function FieldAcquisitionArticle() {
 
               {/* Lead excerpt */}
               <p className="font-display font-light text-text-secondary text-xl md:text-2xl leading-relaxed mb-10 pb-10 border-b border-ink-light/50 italic">
-                The geospatial chain is technically mature at acquisition and analysis. It breaks at communication. Here is how to complete it — all the way to executive decision.
+                The geospatial chain is technically mature at acquisition and analysis. It breaks at communication. Here is how to complete it, all the way to executive decision.
               </p>
 
               {/* Article body */}
@@ -156,7 +159,7 @@ export default function FieldAcquisitionArticle() {
 
                 <h2>The Chain Exists. The Break is Real.</h2>
 
-                <p>I have been in rooms where the data was right, the analysis was solid, and the map was technically flawless — and the director across the table still could not tell me what decision to make next.</p>
+                <p>I have been in rooms where the data was right, the analysis was solid, and the map was technically flawless, and the director across the table still could not tell me what decision to make next.</p>
 
                 <p>Not because he lacked intelligence. Not because he did not care. But because what we handed him was designed for us, not for him.</p>
 
@@ -168,11 +171,11 @@ export default function FieldAcquisitionArticle() {
 
                 <h2>What We Actually Do in the Field</h2>
 
-                <p>Let me be specific about what the geospatial chain looks like, because the executives reading this deserve to understand what they are funding — and the analysts reading this need to see where the handoff goes wrong.</p>
+                <p>Let me be specific about what the geospatial chain looks like, because the executives reading this deserve to understand what they are funding, and the analysts reading this need to see where the handoff goes wrong.</p>
 
-                <p>The chain starts in the field. A survey team, trained and equipped, deploys with smartphones loaded with ODK or KoboCollect. Every data point carries a GPS coordinate. Quality assurance protocols run across four stages — pilot testing, enumerator training, on-ground supervision, and incoming data review. This is not casual. In the Lagos slum upgrading studies I have been part of, enumerators were trained on skip patterns, regex constraints on phone numbers and addresses, and on-the-spot validity checks. The data integrity at this stage is high.</p>
+                <p>The chain starts in the field. A survey team, trained and equipped, deploys with smartphones loaded with ODK or KoboCollect. Every data point carries a GPS coordinate. Quality assurance protocols run across four stages: pilot testing, enumerator training, on-ground supervision, and incoming data review. This is not casual. In the Lagos slum upgrading studies I have been part of, enumerators were trained on skip patterns, regex constraints on phone numbers and addresses, and on-the-spot validity checks. The data integrity at this stage is high.</p>
 
-                <p>From field collection, data flows into a processing environment — QGIS, ArcGIS, or a model-based pipeline. Spatial joins link survey points to administrative boundaries. Raster analysis layers elevation models over flood risk parameters. We run geometric network analysis to trace drainage flow. We model. We validate. We iterate.</p>
+                <p>From field collection, data flows into a processing environment: QGIS, ArcGIS, or a model-based pipeline. Spatial joins link survey points to administrative boundaries. Raster analysis layers elevation models over flood risk parameters. We run geometric network analysis to trace drainage flow. We model. We validate. We iterate.</p>
 
                 <p>The output is technically sophisticated. A flood risk map for a Lagos Local Government Area integrates six variables into a single composite score:</p>
 
@@ -184,7 +187,7 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
 
                 <p>Every coefficient in that formula was derived from literature and weighted through Analytical Hierarchy Process. There are academic papers behind it. There are validation datasets behind it. It is rigorous.</p>
 
-                <p>And then we put it in a dashboard with seven map layers, a 16-colour legend, a spatial statistics panel, and a sidebar of charts — and call the Commissioner in.</p>
+                <p>And then we put it in a dashboard with seven map layers, a 16-colour legend, a spatial statistics panel, and a sidebar of charts, and call the Commissioner in.</p>
 
                 <h2>The Dashboard Problem Is Not a Design Problem</h2>
 
@@ -192,7 +195,7 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
 
                 <p>The problem is not aesthetics. The problem is audience confusion at the point of design. We build dashboards to demonstrate technical competence, not to drive decisions. We include every layer because removing one feels like admitting it was unnecessary. We use every colour in the palette because the data genuinely has that many categories. We add the confidence intervals and the p-values because our academic training taught us that omitting them is dishonest.</p>
 
-                <p>None of this is wrong in intent. All of it is wrong in effect when the audience is an executive whose cognitive budget in a meeting is already stretched, whose mandate is to allocate resources, approve interventions, or redirect programmes — not to interpret spatial autocorrelation.</p>
+                <p>None of this is wrong in intent. All of it is wrong in effect when the audience is an executive whose cognitive budget in a meeting is already stretched, whose mandate is to allocate resources, approve interventions, or redirect programmes, not to interpret spatial autocorrelation.</p>
 
                 <p>In Nigeria, I have sat in rooms with LAMATA executives, with State Ministry of Works directors, with FERMA representatives. Smart, accomplished people. In every case, when we deployed a technically rich dashboard without a decision framework, the meeting drifted. Questions came back to us: &ldquo;What does this mean for our priority?&rdquo; &ldquo;Which area do we act on first?&rdquo; &ldquo;Is this telling us to stop the project or continue?&rdquo;</p>
 
@@ -214,7 +217,7 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
 
                 <p>It looks professional. It is informationally dense. It communicates nothing actionable.</p>
 
-                <p>I have produced dashboards exactly like this. The pivot map of the Ogun-Oshun River Basin water resources study, the flood vulnerability outputs for Lagos flood events, the drainage sedimentation models — all technically valid, all requiring a GIS analyst in the room to walk a decision-maker through what they were looking at.</p>
+                <p>I have produced dashboards exactly like this. The pivot map of the Ogun-Oshun River Basin water resources study, the flood vulnerability outputs for Lagos flood events, the drainage sedimentation models, all technically valid, all requiring a GIS analyst in the room to walk a decision-maker through what they were looking at.</p>
 
                 <p>That is not a dashboard. That is a presentation dependency.</p>
 
@@ -224,7 +227,7 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
 
                 <p>For a flood risk intervention programme, the question might be: &ldquo;Which three LGAs require immediate infrastructure prioritisation based on combined hazard and vulnerability scores?&rdquo;</p>
 
-                <p>Everything on that dashboard serves that question. The map shows those three LGAs, highlighted, with the others greyed. A single ranked table below the map shows the score, the key driver variable, and the recommended intervention type. A traffic-light indicator tells the executive whether the situation in each area is stable, deteriorating, or critical. The chart, if there is one, shows one comparison — last season versus this season — not seven years of trend data.</p>
+                <p>Everything on that dashboard serves that question. The map shows those three LGAs, highlighted, with the others greyed. A single ranked table below the map shows the score, the key driver variable, and the recommended intervention type. A traffic-light indicator tells the executive whether the situation in each area is stable, deteriorating, or critical. The chart, if there is one, shows one comparison, last season versus this season, not seven years of trend data.</p>
 
                 <p>The number of clicks to reach a decision: zero. The number of additional analysts required: zero. The time from opening the dashboard to knowing what to recommend: under ninety seconds.</p>
 
@@ -244,26 +247,38 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
                 A plain-language statement of the question this dashboard is designed to answer. Not a title. Not a project name. A question. Example: &ldquo;Where should we deploy the next phase of drainage intervention?&rdquo;</p>
 
                 <p><strong>2. The Primary Signal</strong><br />
-                One number, one zone, or one map — the single most important output the decision-maker needs to see first. It should be visible without scrolling, without hovering, without clicking. It should be large enough to read from across a conference table.</p>
+                One number, one zone, or one map, the single most important output the decision-maker needs to see first. It should be visible without scrolling, without hovering, without clicking. It should be large enough to read from across a conference table.</p>
 
                 <p><strong>3. The Context Layer</strong><br />
-                The supporting data that explains the primary signal. This is where the analyst&rsquo;s work lives — the composite scores, the ranked comparisons, the trend lines. But it is subordinate to the primary signal, not parallel to it.</p>
+                The supporting data that explains the primary signal. This is where the analyst&rsquo;s work lives, the composite scores, the ranked comparisons, the trend lines. But it is subordinate to the primary signal, not parallel to it.</p>
 
                 <p><strong>4. The Boundary Conditions</strong><br />
-                The constraints the decision-maker already knows about — budget limits, political boundaries, institutional mandates — surfaced explicitly so the dashboard speaks the language of the executive&rsquo;s actual decision environment.</p>
+                The constraints the decision-maker already knows about, budget limits, political boundaries, institutional mandates, surfaced explicitly so the dashboard speaks the language of the executive&rsquo;s actual decision environment.</p>
 
                 <p><strong>5. The Next Action</strong><br />
                 A specific recommended action, stated in operational language. &ldquo;Prioritise drainage desiltation in Oshodi-Isolo and Alimosho LGAs before the next rainy season.&rdquo; Not &ldquo;data suggests elevated risk in western LGAs.&rdquo; An action.</p>
 
+              </div>
+
+              <FunctionalDashboardExample />
+
+              <div className="prose-editorial">
+
                 <h2>The Conversion Question</h2>
 
-                <p>Geospatial teams that want to remain relevant — especially in contexts like Nigeria where GIS adoption is still fighting for legitimacy in government and enterprise — need to understand that dashboards are not deliverables. They are conversion tools.</p>
+                <p>Geospatial teams that want to remain relevant, especially in contexts like Nigeria where GIS adoption is still fighting for legitimacy in government and enterprise, need to understand that dashboards are not deliverables. They are conversion tools.</p>
 
                 <p>The conversion we are after is not page views or session time. It is decision adoption. Did the executive act on what the data said? Did the Commissioner sign the intervention order? Did the planning director change the resource allocation?</p>
 
                 <p>Every design decision in a functional dashboard should be evaluated against that conversion question. Does adding this layer increase the likelihood that the right decision gets made? Does this chart help or complicate? Does this colour choice make the signal clearer or more ambiguous?</p>
 
-                <p>In Lagos, the government spent billions of Naira in 2008 setting up the Lagos Enterprise GIS. A decade later, that platform had not driven the planning outcomes it was built to enable. Not because the data was wrong. Because the chain from data to decision was never completed. The field acquisition happened. The analysis happened. The visualisation happened. The executive insight layer — the part that turns a map into a mandate — was missing.</p>
+              </div>
+
+              <ConversionFunnelChart />
+
+              <div className="prose-editorial">
+
+                <p>In Lagos, the government spent billions of Naira in 2008 setting up the Lagos Enterprise GIS. A decade later, that platform had not driven the planning outcomes it was built to enable. Not because the data was wrong. Because the chain from data to decision was never completed. The field acquisition happened. The analysis happened. The visualisation happened. The executive insight layer, the part that turns a map into a mandate, was missing.</p>
 
                 <p>That layer is what we build now.</p>
 
@@ -271,8 +286,14 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
 
                 <p>The full geospatial chain, designed to drive decisions, has six stages:</p>
 
+              </div>
+
+              <GeospatialChainDiagram />
+
+              <div className="prose-editorial">
+
                 <p><strong>Stage 1: Question-First Field Design</strong><br />
-                Before a single GPS point is collected, the decision the data must inform should already be defined. What is the Commissioner going to be asked to approve? What does the director need to allocate? Field instruments, sampling strategies, and quality assurance protocols flow from that question — not from a data catalogue.</p>
+                Before a single GPS point is collected, the decision the data must inform should already be defined. What is the Commissioner going to be asked to approve? What does the director need to allocate? Field instruments, sampling strategies, and quality assurance protocols flow from that question, not from a data catalogue.</p>
 
                 <p><strong>Stage 2: Analyst-Grade Processing</strong><br />
                 This is where technical rigour belongs. Multi-criteria analysis. Spatial statistics. Model validation. The full technical stack. This stage is for the analyst. It should not be visible to the executive.</p>
@@ -291,13 +312,13 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
 
                 <h2>The GIS Adoption Problem Is a Communication Problem</h2>
 
-                <p>I have given hundreds of talks on GIS. I tore through five drafts preparing for a ministerial session years ago, and I still walked in unsure what would move the needle. The single most difficult challenge GIS adoption faces in Nigeria — and across most of the global south — is its misunderstanding by the executives who are meant to sign off on its implementation.</p>
+                <p>I have given hundreds of talks on GIS. I tore through five drafts preparing for a ministerial session years ago, and I still walked in unsure what would move the needle. The single most difficult challenge GIS adoption faces in Nigeria, and across most of the global south, is its misunderstanding by the executives who are meant to sign off on its implementation.</p>
 
                 <p>That misunderstanding is our responsibility to address. Not theirs.</p>
 
                 <p>We are the ones who designed the dashboards they could not read. We are the ones who put Moran&rsquo;s I in a presentation to a Cabinet-level audience. We are the ones who, when asked what GIS means, instinctively reach for &ldquo;it is like Google Maps&rdquo; because we have learned, through experience, that the technically accurate answer loses the room in forty seconds.</p>
 
-                <p>If we want GIS to drive the decisions it is capable of driving — flood risk managed at scale, transport planned efficiently, health infrastructure located where it is needed, climate-vulnerable populations protected — we need to close the chain. All the way to the executive insight layer.</p>
+                <p>If we want GIS to drive the decisions it is capable of driving, flood risk managed at scale, transport planned efficiently, health infrastructure located where it is needed, climate-vulnerable populations protected, we need to close the chain. All the way to the executive insight layer.</p>
 
                 <p>The field work is already good. The analysis is already solid. The gap is the last ten metres from dashboard to decision.</p>
 
@@ -305,7 +326,7 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
 
                 <p>Build dashboards that answer one question. Hire for translation, not just for analysis. Design for the Commissioner, not for the conference paper.</p>
 
-                <p>And if your dashboard still needs another analyst standing next to it to explain what it means — you have not finished the job.</p>
+                <p>And if your dashboard still needs another analyst standing next to it to explain what it means, you have not finished the job.</p>
 
                 <hr />
 
