@@ -203,7 +203,7 @@ export default function WritingClientPage({ posts }: { posts: Post[] }) {
 
   const filtered = active === 'All Topics' ? posts : posts.filter((p) => p.category === active)
   const featured = filtered.find((p) => p.featured)
-  const rest = filtered.filter((p) => !p.featured)
+  const rest = filtered.filter((p) => p !== featured)
 
   return (
     <>
