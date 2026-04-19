@@ -109,27 +109,57 @@ export default async function ArticlePage({ params }: Props) {
 
       {/* ─── ARTICLE HERO ────────────────────────────────── */}
       <section className="bg-ink pt-24 pb-0">
-        <div className="relative aspect-video md:aspect-[21/6] bg-gradient-to-br from-ink-mid to-ink overflow-hidden">
+        <div className="relative aspect-video md:aspect-[21/6] overflow-hidden">
           {coverUrl ? (
-            <Image src={coverUrl} alt={coverAlt} fill className="object-cover opacity-60" />
+            <>
+              <Image src={coverUrl} alt={coverAlt} fill className="object-cover opacity-55" />
+              {/* Gradient vignette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/20" />
+              <div className="absolute inset-0 bg-gradient-to-r from-ink/30 via-transparent to-ink/30" />
+            </>
           ) : (
-            <div className="absolute inset-0 bg-gradient-to-br from-ink-mid to-ink" />
+            /* Atmospheric no-cover fallback */
+            <div className="absolute inset-0">
+              <div className="absolute inset-0 bg-ink-mid" />
+              <div className="absolute inset-0 bg-gradient-to-br from-gold-DEFAULT/[0.07] via-transparent to-teal-DEFAULT/[0.07]" />
+              {/* Topographic line texture */}
+              <div
+                className="absolute inset-0 opacity-[0.06]"
+                style={{
+                  backgroundImage:
+                    'repeating-linear-gradient(0deg, transparent, transparent 22px, rgba(201,168,76,0.6) 22px, rgba(201,168,76,0.6) 23px)',
+                }}
+              />
+              <div
+                className="absolute inset-0 opacity-[0.03]"
+                style={{
+                  backgroundImage:
+                    'repeating-linear-gradient(90deg, transparent, transparent 22px, rgba(45,212,191,0.6) 22px, rgba(45,212,191,0.6) 23px)',
+                }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink via-transparent to-transparent" />
+            </div>
           )}
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-transparent" />
 
           {/* Headline overlay — desktop */}
-          <div className="absolute bottom-0 left-0 right-0 max-w-[1280px] mx-auto px-6 md:px-10 pb-10 hidden md:block">
-            <div className="flex items-center gap-3 mb-4">
+          <div className="absolute bottom-0 left-0 right-0 max-w-[1280px] mx-auto px-6 md:px-10 pb-12 hidden md:block">
+            <div className="flex flex-wrap items-center gap-4 mb-5">
               <span className="badge badge-teal">{category}</span>
-              <span className="font-mono text-xs text-text-muted flex items-center gap-1.5">
-                <Calendar size={11} />
-                {new Date(publishedAt).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' })}
-              </span>
-              <span className="font-mono text-xs text-text-muted flex items-center gap-1.5">
-                <Clock size={11} /> {readTime} min read
-              </span>
+              {publishedAt && (
+                <span className="font-mono text-[0.7rem] text-text-muted flex items-center gap-1.5">
+                  <Calendar size={11} />
+                  {new Date(publishedAt).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' })}
+                </span>
+              )}
+              {readTime && (
+                <span className="font-mono text-[0.7rem] text-text-muted flex items-center gap-1.5">
+                  <Clock size={11} /> {readTime} min read
+                </span>
+              )}
             </div>
-            <h1 className="font-display font-light text-h1 text-text-primary max-w-3xl leading-tight">{title}</h1>
+            <h1 className="font-display font-light text-text-primary max-w-3xl leading-[1.1] tracking-[-0.02em]" style={{ fontSize: 'clamp(2rem, 4vw, 3.25rem)' }}>
+              {title}
+            </h1>
           </div>
         </div>
 
@@ -137,32 +167,41 @@ export default async function ArticlePage({ params }: Props) {
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 pt-8 pb-4 md:hidden">
           <div className="flex flex-wrap items-center gap-3 mb-4">
             <span className="badge badge-teal">{category}</span>
-            <span className="font-mono text-xs text-text-muted">{readTime} min read</span>
+            {readTime && <span className="font-mono text-[0.7rem] text-text-muted">{readTime} min read</span>}
           </div>
-          <h1 className="font-display font-light text-h1 text-text-primary">{title}</h1>
+          <h1 className="font-display font-light text-h1 text-text-primary leading-tight tracking-[-0.02em]">{title}</h1>
         </div>
       </section>
 
       {/* ─── ARTICLE BODY ────────────────────────────────── */}
       <section className="bg-ink">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 xl:gap-16">
 
             {/* ── Main content ── */}
             <div className="lg:col-span-3">
-              {/* Author row + share */}
+              {/* Author row */}
               <div className="flex items-center gap-4 mb-10 pb-8 border-b border-ink-light">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden bg-ink-mid flex-shrink-0">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden bg-ink-mid flex-shrink-0 ring-1 ring-gold-DEFAULT/20">
                   <Image src="/images/headshot-author.jpg" alt="Joseph Aro" fill className="object-cover" />
                 </div>
-                <div>
+                <div className="flex-1 min-w-0">
                   <p className="font-sans font-semibold text-sm text-text-primary">Joseph Aro</p>
-                  <p className="font-mono text-xs text-text-muted">Geospatial Intelligence · Remote Sensing</p>
+                  <p className="font-mono text-[0.68rem] text-text-muted tracking-wide">
+                    Geospatial Intelligence · Remote Sensing
+                  </p>
                 </div>
-                <div className="ml-auto">
+                <div className="ml-auto flex-shrink-0">
                   <ShareButtons url={articleUrl} title={title} crossPostLinks={crossPostLinks} />
                 </div>
               </div>
+
+              {/* Lead excerpt — shown when body exists */}
+              {(sanityPost?.body || staticArticle?.body) && excerpt && (
+                <p className="font-display font-light text-text-secondary text-xl md:text-2xl leading-relaxed mb-10 pb-10 border-b border-ink-light/50 italic">
+                  {excerpt}
+                </p>
+              )}
 
               {/* Body content */}
               {sanityPost?.body ? (
@@ -170,23 +209,33 @@ export default async function ArticlePage({ params }: Props) {
               ) : staticArticle?.body ? (
                 <div className="prose-editorial" dangerouslySetInnerHTML={{ __html: staticArticle.body }} />
               ) : (
-                <div className="prose-editorial">
-                  <p className="text-text-muted italic border border-dashed border-ink-light rounded-sm p-6 text-sm">
-                    Full article content for &ldquo;{title}&rdquo; is coming soon. Subscribe below to be notified when it&apos;s live.
+                <div>
+                  {/* Styled lead excerpt when no body */}
+                  <p className="font-display font-light text-text-secondary text-xl md:text-2xl leading-relaxed mb-10 italic">
+                    {excerpt}
                   </p>
+                  <div className="my-8 p-7 border border-dashed border-ink-light rounded-sm flex items-start gap-4">
+                    <div className="w-1 h-full min-h-[3rem] bg-gold-DEFAULT/30 flex-shrink-0 self-stretch rounded-full" />
+                    <p className="text-text-muted text-sm leading-relaxed italic">
+                      Full article content for &ldquo;{title}&rdquo; is coming soon. Subscribe below to be notified when it&apos;s live.
+                    </p>
+                  </div>
                 </div>
               )}
 
               {/* Subscribe CTA */}
-              <div className="my-12 p-8 bg-ink-mid border border-ink-light rounded-sm">
-                <p className="font-display font-light text-xl text-text-primary mb-3">Enjoyed this?</p>
-                <p className="text-text-secondary text-sm mb-5">Get future essays and field notes delivered direct. No spam.</p>
+              <div className="my-14 p-8 md:p-10 bg-ink-mid border border-ink-light rounded-sm relative overflow-hidden">
+                <div className="absolute top-0 left-0 w-20 h-[2px] bg-gold-DEFAULT" />
+                <p className="font-display font-light text-xl md:text-2xl text-text-primary mb-3">Enjoyed this?</p>
+                <p className="text-text-secondary text-sm mb-6 max-w-sm">
+                  Get future essays and field notes delivered direct. No spam.
+                </p>
                 <NewsletterForm />
               </div>
 
               {/* Bottom share */}
-              <div className="pt-6 border-t border-ink-light">
-                <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-4">Share this article</p>
+              <div className="pt-8 border-t border-ink-light">
+                <p className="font-mono text-[0.68rem] text-text-muted tracking-[0.15em] uppercase mb-4">Share this article</p>
                 <ShareButtons url={articleUrl} title={title} crossPostLinks={crossPostLinks} />
               </div>
             </div>
@@ -194,14 +243,28 @@ export default async function ArticlePage({ params }: Props) {
             {/* ── Sidebar ── */}
             <div className="lg:col-span-1">
               <div className="sticky top-24 space-y-8">
+                {/* Back link */}
+                <Link
+                  href="/writing"
+                  className="inline-flex items-center gap-2 text-text-muted hover:text-text-primary text-sm transition-colors duration-150 group"
+                >
+                  <ArrowLeft size={13} className="group-hover:-translate-x-0.5 transition-transform duration-150" />
+                  All articles
+                </Link>
+
+                {/* Divider */}
+                <div className="h-px bg-ink-light" />
+
+                {/* Category */}
                 <div>
-                  <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-3">Category</p>
+                  <p className="font-mono text-[0.65rem] text-text-muted tracking-[0.15em] uppercase mb-3">Category</p>
                   <span className="badge badge-teal">{category}</span>
                 </div>
 
+                {/* Tags */}
                 {tags.length > 0 && (
                   <div>
-                    <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-3 flex items-center gap-1.5">
+                    <p className="font-mono text-[0.65rem] text-text-muted tracking-[0.15em] uppercase mb-3 flex items-center gap-1.5">
                       <Tag size={10} /> Tags
                     </p>
                     <div className="flex flex-wrap gap-1.5">
@@ -212,10 +275,36 @@ export default async function ArticlePage({ params }: Props) {
                   </div>
                 )}
 
+                {/* Reading time */}
+                {readTime && (
+                  <div>
+                    <p className="font-mono text-[0.65rem] text-text-muted tracking-[0.15em] uppercase mb-2">Reading time</p>
+                    <p className="font-mono text-sm text-text-secondary">{readTime} min</p>
+                  </div>
+                )}
+
+                {/* Published */}
+                {publishedAt && (
+                  <div>
+                    <p className="font-mono text-[0.65rem] text-text-muted tracking-[0.15em] uppercase mb-2">Published</p>
+                    <p className="font-mono text-[0.78rem] text-text-secondary">
+                      {new Date(publishedAt).toLocaleDateString('en-CA', { month: 'long', day: 'numeric', year: 'numeric' })}
+                    </p>
+                  </div>
+                )}
+
+                {/* Divider */}
+                <div className="h-px bg-ink-light" />
+
+                {/* More writing */}
                 <div>
-                  <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-3">More Writing</p>
-                  <Link href="/writing" className="text-sm text-text-secondary hover:text-text-primary flex items-center gap-1.5 transition-colors">
-                    All Articles <ArrowRight size={13} />
+                  <p className="font-mono text-[0.65rem] text-text-muted tracking-[0.15em] uppercase mb-3">More Writing</p>
+                  <Link
+                    href="/writing"
+                    className="text-sm text-text-secondary hover:text-gold-DEFAULT flex items-center gap-1.5 transition-colors duration-150 group"
+                  >
+                    Browse all articles
+                    <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform duration-150" />
                   </Link>
                 </div>
               </div>
@@ -229,7 +318,10 @@ export default async function ArticlePage({ params }: Props) {
         <section className="bg-ink-mid border-t border-ink-light">
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 py-section">
             <RevealSection>
-              <h2 className="font-display font-light text-h3 text-text-primary mb-8">More to read</h2>
+              <div className="flex items-center gap-3 mb-8">
+                <div className="h-px w-6 bg-gold-DEFAULT/50" />
+                <h2 className="font-mono text-[0.7rem] text-gold-DEFAULT tracking-[0.18em] uppercase">More to Read</h2>
+              </div>
             </RevealSection>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {relatedPosts.map((post: any, i: number) => {
@@ -237,15 +329,28 @@ export default async function ArticlePage({ params }: Props) {
                 const pTitle = post.title
                 const pCategory = post.category?.title ?? post.category
                 const pRead = post.estimatedReadingTime ?? post.readTime
+                const pExcerpt = post.excerpt
                 return (
-                  <RevealSection key={post._id ?? post.id} delay={i * 60}>
+                  <RevealSection key={post._id ?? post.id} delay={i * 70}>
                     <Link href={`/writing/${pSlug}`} className="group block h-full">
-                      <div className="bg-ink border border-ink-light rounded-sm p-5 h-full card-interactive">
-                        <span className="badge badge-teal mb-3 block w-fit">{pCategory}</span>
-                        <h3 className="font-display font-light text-text-primary text-base group-hover:text-gold-DEFAULT transition-colors duration-200">
+                      <div className="bg-ink border border-ink-light rounded-sm p-6 h-full flex flex-col card-interactive">
+                        <div className="flex items-center gap-3 mb-4">
+                          <span className="badge badge-teal">{pCategory}</span>
+                          {pRead && (
+                            <span className="font-mono text-[0.65rem] text-text-muted">{pRead} min</span>
+                          )}
+                        </div>
+                        <h3 className="font-display font-light text-text-primary text-base mb-3 leading-snug group-hover:text-gold-DEFAULT transition-colors duration-200 flex-1">
                           {pTitle}
                         </h3>
-                        <p className="font-mono text-xs text-text-muted mt-3">{pRead} min read</p>
+                        {pExcerpt && (
+                          <p className="text-text-muted text-[0.8rem] leading-relaxed line-clamp-2 mb-4">
+                            {pExcerpt}
+                          </p>
+                        )}
+                        <span className="font-mono text-[0.68rem] text-text-muted group-hover:text-gold-DEFAULT flex items-center gap-1 transition-colors duration-150 mt-auto">
+                          Read <ArrowRight size={11} />
+                        </span>
                       </div>
                     </Link>
                   </RevealSection>
@@ -257,31 +362,33 @@ export default async function ArticlePage({ params }: Props) {
       )}
 
       {/* ─── PREV / NEXT ─────────────────────────────────── */}
-      <section className="border-t border-ink-light">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-10 py-8 grid grid-cols-2 gap-4">
-          {prevArticle ? (
-            <Link href={`/writing/${prevArticle.slug}`} className="group">
-              <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-2 flex items-center gap-1.5">
-                <ArrowLeft size={12} /> Previous
-              </p>
-              <p className="font-display font-light text-text-primary text-sm group-hover:text-gold-DEFAULT transition-colors duration-200">
-                {prevArticle.title}
-              </p>
-            </Link>
-          ) : <div />}
+      {(prevArticle || nextArticle) && (
+        <section className="border-t border-ink-light bg-ink">
+          <div className="max-w-[1280px] mx-auto px-6 md:px-10 py-10 grid grid-cols-2 gap-6">
+            {prevArticle ? (
+              <Link href={`/writing/${prevArticle.slug}`} className="group">
+                <p className="font-mono text-[0.65rem] text-text-muted tracking-[0.15em] uppercase mb-3 flex items-center gap-1.5">
+                  <ArrowLeft size={11} /> Previous
+                </p>
+                <p className="font-display font-light text-text-secondary text-base group-hover:text-text-primary transition-colors duration-150 leading-snug">
+                  {prevArticle.title}
+                </p>
+              </Link>
+            ) : <div />}
 
-          {nextArticle && (
-            <Link href={`/writing/${nextArticle.slug}`} className="group text-right ml-auto">
-              <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-2 flex items-center gap-1.5 justify-end">
-                Next <ArrowRight size={12} />
-              </p>
-              <p className="font-display font-light text-text-primary text-sm group-hover:text-gold-DEFAULT transition-colors duration-200">
-                {nextArticle.title}
-              </p>
-            </Link>
-          )}
-        </div>
-      </section>
+            {nextArticle && (
+              <Link href={`/writing/${nextArticle.slug}`} className="group text-right ml-auto">
+                <p className="font-mono text-[0.65rem] text-text-muted tracking-[0.15em] uppercase mb-3 flex items-center gap-1.5 justify-end">
+                  Next <ArrowRight size={11} />
+                </p>
+                <p className="font-display font-light text-text-secondary text-base group-hover:text-text-primary transition-colors duration-150 leading-snug">
+                  {nextArticle.title}
+                </p>
+              </Link>
+            )}
+          </div>
+        </section>
+      )}
     </>
   )
 }

@@ -42,6 +42,13 @@
     0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
   }
+
+  /* Spotlight animation for aceternity Spotlight component */
+  --animate-spotlight: spotlight 2s ease 0.75s 1 forwards;
+  @keyframes spotlight {
+    0% { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
+    100% { opacity: 1; transform: translate(-50%, -40%) scale(1); }
+  }
 }
 
 /* CSS Custom Properties for use in non-Tailwind contexts */
@@ -215,36 +222,140 @@ body {
 }
 .ticker-track:hover { animation-play-state: paused; }
 
-/* Reading mode */
-.reading-mode {
-  background-color: var(--surface);
-  color: #1a1a1a;
-}
+/* ── PROSE / ARTICLE RENDERING ────────────────────────── */
 .prose-editorial {
   font-family: 'Inter', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 1.85;
-  color: #2a2a2a;
-  max-width: 680px;
+  color: var(--text-secondary);
+  max-width: 72ch;
+}
+.prose-editorial p {
+  margin-bottom: 1.75rem;
 }
 .prose-editorial h2 {
   font-family: 'Playfair Display', serif;
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
-  font-weight: 400;
-  margin-top: 2.5rem;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 300;
+  margin-top: 3.5rem;
   margin-bottom: 1rem;
-  color: #111;
-  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
-.prose-editorial p { margin-bottom: 1.5rem; }
+.prose-editorial h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.45rem);
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 2.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+.prose-editorial h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
 .prose-editorial blockquote {
-  border-left: 3px solid var(--gold);
-  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left: 2px solid var(--gold);
+  padding: 0.75rem 0 0.75rem 1.75rem;
   margin: 2.5rem 0;
   font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-style: italic;
-  color: #333;
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+.prose-editorial strong {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.prose-editorial em {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+.prose-editorial a {
+  color: var(--gold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(201,168,76,0.4);
+  transition: color 200ms ease, text-decoration-color 200ms ease;
+}
+.prose-editorial a:hover {
+  color: #dabb67;
+  text-decoration-color: rgba(201,168,76,0.9);
+}
+.prose-editorial code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.88em;
+  background: rgba(45, 212, 191, 0.06);
+  color: var(--teal);
+  padding: 0.15em 0.45em;
+  border-radius: 2px;
+  border: 1px solid rgba(45, 212, 191, 0.18);
+}
+.prose-editorial pre {
+  background: var(--ink-mid);
+  border: 1px solid var(--ink-light);
+  border-radius: 3px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  margin: 2.25rem 0;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+.prose-editorial pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+.prose-editorial ul,
+.prose-editorial ol {
+  margin-bottom: 1.75rem;
+  padding-left: 1.5rem;
+}
+.prose-editorial li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+}
+.prose-editorial ul li::marker { color: var(--gold); }
+.prose-editorial ol li::marker { color: var(--gold); font-family: 'JetBrains Mono', monospace; font-size: 0.85em; }
+.prose-editorial hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.3) 50%, transparent 100%);
+  margin: 3.5rem 0;
+}
+.prose-editorial figure { margin: 2.5rem 0; }
+.prose-editorial figcaption {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 0.75rem;
+  letter-spacing: 0.03em;
+}
+/* Drop cap for first paragraph */
+.prose-editorial > p:first-of-type::first-letter {
+  float: left;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  line-height: 0.85;
+  margin-right: 0.1em;
+  margin-top: 0.08em;
+  color: var(--gold);
 }
 
 @keyframes ticker {

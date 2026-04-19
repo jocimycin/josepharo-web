@@ -318,8 +318,8 @@ export const roles = [
 ]
 
 export const credentials = [
-  { type: 'degree', title: 'M.Sc. Geography and Environmental Management', institution: 'PLACEHOLDER — confirm institution', year: '' },
-  { type: 'degree', title: 'B.Tech Geography', institution: 'PLACEHOLDER — confirm institution', year: '' },
+  { type: 'degree', title: 'M.Sc. Geography and Environmental Management', institution: 'University of Ilorin', year: '' },
+  { type: 'degree', title: 'B.Tech Geography', institution: 'Federal University of Technology, Yola', year: '' },
   { type: 'certificate', title: 'Certificate in Climate Change and its Impacts', institution: 'Brown University', year: '' },
   { type: 'license', title: 'Advanced Pilot Certificate (UAV)', institution: 'Transport Canada', year: '' },
   { type: 'license', title: 'Remote Pilot License', institution: 'South African Civil Aviation Authority / UAV Industries', year: '' },
@@ -386,14 +386,14 @@ export const articles = [
   {
     id: 'article-1',
     title: 'Why Most Geospatial Dashboards Fail Decision-Makers',
-    slug: 'first-article',
+    slug: 'why-geospatial-dashboards-fail-decision-makers',
     category: 'Geospatial Intelligence',
     excerpt:
-      'Most geospatial dashboards are built for analysts, not for the people who need to act on the data. The gap between technical output and decision-ready intelligence is where most projects break down — and it is a design problem, not a data problem.',
+      'Beautiful maps. Cluttered panels. Metrics nobody acts on. The geospatial industry has a dashboard problem — and it is not a technology problem. It is a communication problem.',
     date: '2026-03-01',
-    readTime: 6,
+    readTime: 8,
     featured: true,
-    coverImage: '/images/blog-placeholder-1.jpg',
+    coverImage: '/images/articles/dashboard-fail-cover.jpg',
     body: '',
   },
   {
