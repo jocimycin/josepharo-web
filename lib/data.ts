@@ -84,26 +84,26 @@ export const expertise = [
 export const projects = [
   {
     id: 'geospatial-coe',
-    title: 'Geospatial Centre of Excellence & Data Transformation',
+    title: 'Enterprise Geospatial Capability & Data Governance',
     client: 'Enterprise Mining Operations',
     category: 'Data Strategy',
     domain: 'Mining & Exploration',
     period: '2024–Present',
     role: 'Lead, Data and Information',
     summary:
-      'Built and supported a geospatial transformation direction that strengthened standards, governance, and the strategic use of spatial intelligence within an enterprise mining context — driving the shift from siloed data practices toward connected spatial intelligence.',
+      'Applied enterprise GIS leadership, spatial data governance, and geospatial standards development within a large-scale mining and resources context. Focused on improving the quality, accessibility, and strategic utility of spatial data across a complex operational environment.',
     challenge:
-      'Geospatial capability was fragmented across teams, tools, and workflows. The challenge was to create a more connected operating model where data, standards, and analysis could scale more effectively across a large international operation.',
+      'Enterprise geospatial environments accumulate inconsistency across teams, tools, and data practices. The challenge was to establish clear standards and governance that would improve data quality and spatial capability without disrupting ongoing operations.',
     approach:
-      'Audited existing data architecture, defined governance standards and metadata conventions, deployed advanced aerial mapping workflows using UAV platforms with LiDAR, optical, and magnetic sensors, and led the architectural transformation toward interconnected geospatial data structures.',
+      'Assessed existing spatial data practices, developed governance standards and metadata conventions, deployed advanced aerial mapping workflows using UAV platforms with LiDAR and optical sensors, and supported the development of more consistent geospatial data structures across the organisation.',
     methods: ['ArcGIS Enterprise', 'QGIS', 'LiDAR', 'UAV Operations', 'FME', 'Data Governance', 'Remote Sensing'],
     outcomes:
-      'A stronger foundation for connected geospatial intelligence and more coherent enterprise practice. Documented standards adopted across the organisation. Advanced aerial mapping capabilities deployed and fragmented spatial systems consolidated.',
+      'Improved spatial data standards and governance practice across a complex operational context. Advanced aerial mapping capabilities deployed. More consistent and accessible geospatial data available to technical and operational teams.',
     reflection:
-      'The true value of geospatial capability appears when it shifts from isolated technical production to integrated decision infrastructure. The governance framework was as important as the technology choices.',
+      'Geospatial governance is most effective when it is treated as an operational discipline, not a technical afterthought. Clear standards and well-structured data are prerequisites for any meaningful spatial analysis at scale.',
     featured: true,
-    coverImage: '/images/project-teck-coe.jpg', // Terrain Modelling
-    slug: 'geospatial-centre-of-excellence',
+    coverImage: '/images/project-teck-coe.jpg',
+    slug: 'enterprise-geospatial-capability',
   },
   {
     id: 'mineral-exploration',
@@ -114,7 +114,7 @@ export const projects = [
     period: '2024–Present',
     role: 'Lead, Data and Information',
     summary:
-      'Applied earth observation workflows to support mineral exploration understanding through spectral interpretation, alteration mapping, and geospatial analysis — enabling improved exploration targeting and spatial intelligence.',
+      'Application of multispectral and hyperspectral remote sensing techniques for mineral exploration in complex geological environments. Covers spectral analysis, alteration mineralogy interpretation, and the integration of earth observation data into exploration workflows.',
     challenge:
       'Exploration contexts require the ability to extract actionable signals from large, multi-source datasets while retaining geological credibility. Teams relied on conventional survey methods without leveraging spectral data from modern remote sensing platforms.',
     approach:
@@ -253,7 +253,7 @@ export const roles = [
     period: 'June 2024 – Present',
     location: 'Canada',
     narrative:
-      'Leads geospatial excellence, data governance, remote sensing workflows, and digital asset management across a broad international operating context. Established a geospatial centre of excellence and is advancing the enterprise shift from siloed spatial architecture to interconnected intelligence systems.',
+      'Senior geospatial and data professional leading GIS, remote sensing, and spatial data capability within a major enterprise mining context in Canada.',
   },
   {
     id: 'candrone',

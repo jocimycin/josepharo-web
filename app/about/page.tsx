@@ -279,7 +279,7 @@ export default function AboutPage() {
           <RevealSection className="mt-16">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-8 border-t border-ink-light">
               <p className="font-mono text-xs text-text-muted tracking-widest">
-                Joseph Aro&nbsp;&nbsp;·&nbsp;&nbsp;Teck Resources&nbsp;&nbsp;·&nbsp;&nbsp;Vancouver
+                Joseph Aro&nbsp;&nbsp;·&nbsp;&nbsp;Vancouver, BC
               </p>
               <span className="font-mono text-xs tracking-widest" style={{ color: '#FB923C' }}>
                 ⬜ Next Frontier
