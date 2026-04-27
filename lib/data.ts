@@ -83,52 +83,6 @@ export const expertise = [
 
 export const projects = [
   {
-    id: 'geospatial-coe',
-    title: 'Enterprise Geospatial Capability & Data Governance',
-    client: 'Enterprise Mining Operations',
-    category: 'Data Strategy',
-    domain: 'Mining & Exploration',
-    period: '2024–Present',
-    role: 'Lead, Data and Information',
-    summary:
-      'Applied enterprise GIS leadership, spatial data governance, and geospatial standards development within a large-scale mining and resources context. Focused on improving the quality, accessibility, and strategic utility of spatial data across a complex operational environment.',
-    challenge:
-      'Enterprise geospatial environments accumulate inconsistency across teams, tools, and data practices. The challenge was to establish clear standards and governance that would improve data quality and spatial capability without disrupting ongoing operations.',
-    approach:
-      'Assessed existing spatial data practices, developed governance standards and metadata conventions, deployed advanced aerial mapping workflows using UAV platforms with LiDAR and optical sensors, and supported the development of more consistent geospatial data structures across the organisation.',
-    methods: ['ArcGIS Enterprise', 'QGIS', 'LiDAR', 'UAV Operations', 'FME', 'Data Governance', 'Remote Sensing'],
-    outcomes:
-      'Improved spatial data standards and governance practice across a complex operational context. Advanced aerial mapping capabilities deployed. More consistent and accessible geospatial data available to technical and operational teams.',
-    reflection:
-      'Geospatial governance is most effective when it is treated as an operational discipline, not a technical afterthought. Clear standards and well-structured data are prerequisites for any meaningful spatial analysis at scale.',
-    featured: true,
-    coverImage: '/images/project-teck-coe.jpg',
-    slug: 'enterprise-geospatial-capability',
-  },
-  {
-    id: 'mineral-exploration',
-    title: 'Mineral Exploration Mapping with Multispectral & Hyperspectral Data',
-    client: 'Enterprise Mining Operations',
-    category: 'Remote Sensing',
-    domain: 'Mining & Exploration',
-    period: '2024–Present',
-    role: 'Lead, Data and Information',
-    summary:
-      'Application of multispectral and hyperspectral remote sensing techniques for mineral exploration in complex geological environments. Covers spectral analysis, alteration mineralogy interpretation, and the integration of earth observation data into exploration workflows.',
-    challenge:
-      'Exploration contexts require the ability to extract actionable signals from large, multi-source datasets while retaining geological credibility. Teams relied on conventional survey methods without leveraging spectral data from modern remote sensing platforms.',
-    approach:
-      'Designed and implemented workflows for processing multispectral and hyperspectral imagery, integrating spectral analysis and alteration mapping into the exploration intelligence pipeline.',
-    methods: ['Hyperspectral Analysis', 'Multispectral Remote Sensing', 'Alteration Mapping', 'Google Earth Engine', 'Python', 'ArcGIS'],
-    outcomes:
-      'Improved interpretation pathways for exploration targeting and spatial understanding. Established a repeatable spectral analysis workflow for mineral occurrence analysis, advancing long-term exploration intelligence capabilities.',
-    reflection:
-      'Remote sensing delivers the most value when spectral workflows are tightly tied to exploration questions, not treated as isolated image exercises. The intersection of spectral data science and operational mining intelligence is a long-term competitive advantage.',
-    featured: true,
-    coverImage: '/images/project-lidar-bridge.png',
-    slug: 'mineral-exploration-mapping',
-  },
-  {
     id: 'lagos-lagoon',
     title: 'Lagos Lagoon Hydrographic Intelligence & Geospatial Portal',
     client: 'Lagos State Waterways Authority (LASWA)',
@@ -170,7 +124,7 @@ export const projects = [
       'Delivered hydrographic intelligence and environmental data supporting commercial navigation route feasibility and investment planning.',
     reflection:
       'Waterways investment requires bridging technical hydrographic science with commercial viability assessment — the intelligence must be actionable for decision-makers, not just technically complete.',
-    featured: false,
+    featured: true,
     coverImage: '/images/field-on-water.jpg',
     slug: 'wide-lag-waterways-investment',
   },
@@ -193,7 +147,7 @@ export const projects = [
       'Delivered drone mapping across 100,000+ hectares. Products used in real estate valuation, environmental impact assessment, infrastructure planning, and regulatory compliance.',
     reflection:
       'Drone mapping at scale is an operational discipline as much as a technical one — logistics, airspace coordination, and workflow design determine whether the data actually reaches the decision-maker.',
-    featured: false,
+    featured: true,
     coverImage: '/images/field-drone.jpg',
     slug: 'enterprise-drone-mapping',
   },
