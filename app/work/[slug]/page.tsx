@@ -156,16 +156,6 @@ export default async function CaseStudyPage({ params }: Props) {
             <RevealSection delay={120}>
               <div className="sticky top-24 space-y-5">
                 <div className="bg-ink-mid border border-ink-light rounded-sm p-6">
-                  <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-4">Interested in similar work?</p>
-                  <p className="text-text-secondary text-sm mb-5">
-                    For consulting, research collaboration, or advisory inquiries — get in touch.
-                  </p>
-                  <Link href="/contact" className="btn-primary w-full justify-center text-xs">
-                    Get in Touch
-                  </Link>
-                </div>
-
-                <div className="bg-ink-mid border border-ink-light rounded-sm p-6">
                   <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-4">Explore More Work</p>
                   <Link href="/work" className="btn-secondary w-full justify-center text-xs">
                     All Projects

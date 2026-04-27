@@ -115,11 +115,6 @@ export default function WorkPage() {
             ))}
           </div>
 
-          <RevealSection className="mt-14">
-            <Link href="/contact" className="btn-primary inline-flex">
-              Start a conversation
-            </Link>
-          </RevealSection>
         </div>
       </section>
     </>

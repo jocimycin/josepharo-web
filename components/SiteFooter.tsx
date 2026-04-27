@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { siteConfig, blogCategories } from '@/lib/data'
-import { ArrowUpRight, Mail, Linkedin } from 'lucide-react'
+import { Mail, Linkedin } from 'lucide-react'
 import NewsletterForm from '@/components/NewsletterForm'
 import JaLogo from '@/components/JaLogo'
 
@@ -8,7 +8,6 @@ const footerNav = [
   { label: 'About', href: '/about' },
   { label: 'Work', href: '/work' },
   { label: 'Writing', href: '/writing' },
-  { label: 'Contact', href: '/contact' },
 ]
 
 const writingCategories = blogCategories.slice(0, 6)
@@ -16,22 +15,6 @@ const writingCategories = blogCategories.slice(0, 6)
 export default function SiteFooter() {
   return (
     <footer className="bg-ink-mid border-t border-ink-light">
-      {/* CTA Band */}
-      <div className="bg-ink-light">
-        <div className="max-w-[1280px] mx-auto px-6 md:px-10 py-20 text-center">
-          <p className="font-mono text-xs text-text-muted tracking-widest uppercase mb-4">Open to collaboration</p>
-          <h2 className="font-display text-h2 text-text-primary font-light mb-4">
-            Working on something complex?
-          </h2>
-          <p className="text-text-secondary text-base mb-8 max-w-md mx-auto">
-            For consulting, research collaboration, speaking, or strategic advisory — let&apos;s talk.
-          </p>
-          <Link href="/contact" className="btn-primary inline-flex">
-            Get in Touch <ArrowUpRight size={16} />
-          </Link>
-        </div>
-      </div>
-
       {/* Footer grid */}
       <div className="max-w-[1280px] mx-auto px-6 md:px-10 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
@@ -125,6 +108,9 @@ export default function SiteFooter() {
           <div className="flex gap-6">
             <Link href="/privacy" className="font-mono text-xs text-text-muted hover:text-text-secondary transition-colors duration-200">
               Privacy
+            </Link>
+            <Link href="/speaking" className="font-mono text-xs text-text-muted hover:text-text-secondary transition-colors duration-200">
+              Speaking
             </Link>
             <a
               href={`mailto:${siteConfig.email}`}

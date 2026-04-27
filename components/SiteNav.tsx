@@ -10,8 +10,6 @@ const navLinks = [
   { label: 'About', href: '/about' },
   { label: 'Work', href: '/work' },
   { label: 'Writing', href: '/writing' },
-  { label: 'Speaking', href: '/speaking' },
-  { label: 'Contact', href: '/contact' },
 ]
 
 export default function SiteNav() {
@@ -79,9 +77,6 @@ export default function SiteNav() {
                 />
               </Link>
             ))}
-            <Link href="/contact" className="btn-primary text-xs py-2 px-4">
-              Get in Touch
-            </Link>
           </nav>
 
           {/* Mobile hamburger */}
@@ -119,9 +114,6 @@ export default function SiteNav() {
         </nav>
 
         <div className="mt-10 flex flex-col gap-4">
-          <Link href="/contact" className="btn-primary justify-center">
-            Get in Touch
-          </Link>
           <Link href="/writing" className="btn-secondary justify-center">
             Read My Writing
           </Link>
