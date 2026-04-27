@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'Selected geospatial, remote sensing, hydrographic, and UAV mapping projects by Joseph Aro — spanning waterways intelligence, infrastructure planning, drone mapping, and spatial data strategy.',
 }
 
-const domains = ['All', 'Project Management', 'Geospatial Data Strategy', 'Remote Sensing Analysis', 'Hydrographics and Hydrology', 'Large Scale Mapping', 'Infrastructure and City Planning', 'Data Governance and Operational Leadership']
+const domains = ['All', 'Waterways & Infrastructure', 'UAV & Drone Mapping', 'Data Strategy', 'Climate & Environment', 'Infrastructure & Planning']
 
 export default function WorkPage() {
   return (
@@ -24,7 +24,7 @@ export default function WorkPage() {
               Projects across domains, disciplines, and geographies.
             </h1>
             <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-xl">
-              A decade of applied geospatial practice. Waterways intelligence, drone mapping at scale, infrastructure planning, and spatial data strategy across West Africa and North America.
+              A decade of applied geospatial practice. Project Management, Geospatial Data Strategy, Remote Sensing Analysis, Hydrographics and Hydrology, Large Scale Mapping, Infrastructure and City Planning, and Data Governance and Operational Leadership across West Africa and North America.
             </p>
           </RevealSection>
         </div>
