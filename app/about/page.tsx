@@ -138,7 +138,7 @@ export default function AboutPage() {
 
             <RevealSection delay={120}>
               <p className="text-text-secondary text-base md:text-lg leading-relaxed">
-                Joseph&apos;s portfolio includes geospatial governance, mineral exploration mapping, permafrost change detection, hydrographic and hydrodynamic studies, drone mapping at scale, and the design of geospatial information platforms. He also brings a strong training and capacity-building dimension, having supported the development of hundreds of professionals in GIS, drones, and applied spatial intelligence.
+                Joseph&apos;s portfolio includes geospatial governance, mineral exploration mapping, hydrographic and hydrodynamic studies, drone mapping at scale, and the design of geospatial information platforms. He also brings a strong training and capacity-building dimension, having supported the development of hundreds of professionals in GIS, drones, and applied spatial intelligence.
               </p>
             </RevealSection>
           </div>
@@ -279,7 +279,7 @@ export default function AboutPage() {
           <RevealSection className="mt-16">
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pt-8 border-t border-ink-light">
               <p className="font-mono text-xs text-text-muted tracking-widest">
-                Joseph Aro&nbsp;&nbsp;·&nbsp;&nbsp;Lead, Data & Information (GIS & Remote Sensing)&nbsp;&nbsp;·&nbsp;&nbsp;Teck Resources&nbsp;&nbsp;·&nbsp;&nbsp;Vancouver
+                Joseph Aro&nbsp;&nbsp;·&nbsp;&nbsp;Teck Resources&nbsp;&nbsp;·&nbsp;&nbsp;Vancouver
               </p>
               <span className="font-mono text-xs tracking-widest" style={{ color: '#FB923C' }}>
                 ⬜ Next Frontier
@@ -357,9 +357,6 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/work" className="btn-primary">
               Explore My Work <ArrowRight size={16} />
-            </Link>
-            <Link href="/contact" className="btn-secondary">
-              Get in Touch
             </Link>
           </div>
         </RevealSection>

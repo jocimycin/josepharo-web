@@ -30,7 +30,6 @@ export const hero = {
 
 export const credibilityStrip = [
   '10+ Years Applied Geospatial Practice',
-  'Teck Resources',
   'Lagos State Waterways Authority',
   'Adam Smith International',
   '300+ Professionals Trained',
@@ -86,7 +85,7 @@ export const projects = [
   {
     id: 'geospatial-coe',
     title: 'Geospatial Centre of Excellence & Data Transformation',
-    client: 'Teck Resources',
+    client: 'Enterprise Mining Operations',
     category: 'Data Strategy',
     domain: 'Mining & Exploration',
     period: '2024–Present',
@@ -109,7 +108,7 @@ export const projects = [
   {
     id: 'mineral-exploration',
     title: 'Mineral Exploration Mapping with Multispectral & Hyperspectral Data',
-    client: 'Teck Resources',
+    client: 'Enterprise Mining Operations',
     category: 'Remote Sensing',
     domain: 'Mining & Exploration',
     period: '2024–Present',
@@ -128,29 +127,6 @@ export const projects = [
     featured: true,
     coverImage: '/images/project-lidar-bridge.png',
     slug: 'mineral-exploration-mapping',
-  },
-  {
-    id: 'permafrost',
-    title: 'Regional Permafrost Change Detection & Mineral Occurrence Analysis',
-    client: 'Teck Resources',
-    category: 'Remote Sensing',
-    domain: 'Climate & Environment',
-    period: '2024–Present',
-    role: 'Lead, Data and Information',
-    summary:
-      'Applied remote sensing and multicluster computing to assess permafrost change across a regional study area and relate findings to mineral occurrence patterns.',
-    challenge:
-      'Understanding permafrost dynamics in operational and exploration areas requires large-scale time-series analysis beyond the capacity of conventional desktop GIS tools.',
-    approach:
-      'Designed a cloud-based multicluster computing workflow combining satellite-derived surface temperature and vegetation indices to detect permafrost change, integrated with mineral occurrence data.',
-    methods: ['Google Earth Engine', 'Python', 'Time-Series Analysis', 'Remote Sensing', 'Permafrost Modelling'],
-    outcomes:
-      'Produced regional permafrost change maps with temporal analysis, providing environmental intelligence for operational planning and exploration.',
-    reflection:
-      'Climate-aware geospatial intelligence is no longer a research niche — it is operational necessity for any resource organisation working in northern or high-altitude environments.',
-    featured: false,
-    coverImage: '/images/project-erosion.jpg',
-    slug: 'permafrost-change-detection',
   },
   {
     id: 'lagos-lagoon',

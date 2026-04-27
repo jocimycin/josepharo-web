@@ -134,7 +134,7 @@ export default function GeospatialDashboardsArticle() {
                 <div className="flex-1 min-w-0">
                   <p className="font-sans font-semibold text-sm text-text-primary">Joseph Aro</p>
                   <p className="font-mono text-[0.68rem] text-text-muted tracking-wide">
-                    Lead Data &amp; Information · Teck Resources Ltd.
+                    Geospatial Intelligence Specialist · OEA Consults
                   </p>
                 </div>
                 <div className="ml-auto flex-shrink-0">
@@ -330,14 +330,7 @@ export default function GeospatialDashboardsArticle() {
                 <hr />
 
                 <p className="text-sm text-text-muted leading-relaxed">
-                  <em>Joseph Aro is Lead Data &amp; Information at Teck Resources Ltd., where he leads geospatial transformation and remote sensing strategy across enterprise mining operations. He has over a decade of applied geospatial practice across mining, waterways, infrastructure, and environmental systems in Canada and Nigeria. He is licensed by Transport Canada as a UAV pilot and leads OEA Consults, a geospatial and drone mapping firm based in Lagos.</em>
-                </p>
-
-                <p className="text-sm">
-                  <em>For consulting, strategic advisory, or speaking engagements: </em>
-                  <Link href="/contact" className="text-gold-DEFAULT hover:underline">
-                    josepharo.me/contact
-                  </Link>
+                  <em>Joseph Aro has over a decade of applied geospatial practice across mining, waterways, infrastructure, and environmental systems in Canada and Nigeria. He is licensed by Transport Canada as a UAV pilot and leads OEA Consults, a geospatial and drone mapping firm based in Lagos.</em>
                 </p>
 
               </div>

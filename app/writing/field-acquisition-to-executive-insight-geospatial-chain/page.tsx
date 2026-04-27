@@ -134,7 +134,7 @@ export default function FieldAcquisitionArticle() {
                 <div className="flex-1 min-w-0">
                   <p className="font-sans font-semibold text-sm text-text-primary">Joseph Aro</p>
                   <p className="font-mono text-[0.68rem] text-text-muted tracking-wide">
-                    Lead Data &amp; Information · Teck Resources Ltd.
+                    Geospatial Intelligence Specialist · OEA Consults
                   </p>
                 </div>
                 <div className="ml-auto flex-shrink-0">
@@ -331,14 +331,7 @@ Vulnerability Index = 0.26×PD + 0.64×LULC + 0.1×ED`}</code></pre>
                 <hr />
 
                 <p className="text-sm text-text-muted leading-relaxed">
-                  <em>Joseph Aro is a Geospatial Intelligence Analyst, Climate Change Analyst, and Co-founder of OEA Consults. He has over fifteen years of experience deploying geospatial solutions across urban development, flood risk management, infrastructure planning, and climate adaptation in Nigeria and North America. He is Lead Data &amp; Information at Teck Resources Ltd. and is licensed by Transport Canada as a UAV pilot.</em>
-                </p>
-
-                <p className="text-sm">
-                  <em>For consulting, strategic advisory, or speaking engagements: </em>
-                  <Link href="/contact" className="text-gold-DEFAULT hover:underline">
-                    josepharo.me/contact
-                  </Link>
+                  <em>Joseph Aro is a Geospatial Intelligence Analyst, Climate Change Analyst, and Co-founder of OEA Consults. He has over fifteen years of experience deploying geospatial solutions across urban development, flood risk management, infrastructure planning, and climate adaptation in Nigeria and North America. He is licensed by Transport Canada as a UAV pilot.</em>
                 </p>
 
               </div>

@@ -270,8 +270,7 @@ export default function HomePage() {
             </h2>
           </div>
           <p className="text-text-secondary text-base md:text-lg leading-relaxed max-w-[640px]">
-            {/* PLACEHOLDER — update with Joseph's current focus note */}
-            Currently based in BC, Canada, leading geospatial data transformation and remote sensing initiatives at Teck Resources. Simultaneously continuing hydrographic consultancy work in Lagos, Nigeria, and building out OEA Consults&apos; enterprise drone mapping capabilities.
+            Currently based in BC, Canada, employed at Teck Resources. Continuing consultancy work in Lagos, Nigeria through OEA Consults, focused on hydrographic intelligence and enterprise drone mapping.
           </p>
           <div className="mt-6 flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-teal-DEFAULT animate-pulse" />
